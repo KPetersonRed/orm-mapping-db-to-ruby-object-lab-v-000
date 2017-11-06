@@ -67,7 +67,7 @@ def self.count_all_students_in_grade_9
     WHERE grade = 9
   SQL
 
-  DB[:conn].execute(sql, name).map do |row|
+  DB[:conn].execute(sql, grade).map do |row|
     self.new_from_db(row)
   end
 end
